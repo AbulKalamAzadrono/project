@@ -1,204 +1,64 @@
 @extends('layouts/backend/app')
 @push('css')
     <style>
-        body{
-            background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+        hr{
+            background: #000000;
+            width: 75%;
+            height: 1px;
         }
-        .emp-profile{
-            padding: 3%;
-            margin-top: 3%;
-            margin-bottom: 3%;
-            border-radius: 0.5rem;
-            background: #fff;
-        }
-        .profile-img{
-            text-align: center;
-        }
-        .profile-img img{
-            width: 70%;
-            height: 100%;
-        }
-        .profile-img .file {
-            position: relative;
-            overflow: hidden;
-            margin-top: -20%;
-            width: 70%;
-            border: none;
-            border-radius: 0;
-            font-size: 15px;
-            background: #212529b8;
-        }
-        .profile-img .file input {
-            position: absolute;
-            opacity: 0;
-            right: 0;
-            top: 0;
-        }
-        .profile-head h5{
-            color: #333;
-        }
-        .profile-head h6{
-            color: #0062cc;
-        }
-        .profile-edit-btn{
-            border: none;
-            border-radius: 1.5rem;
-            width: 70%;
-            padding: 2%;
-            font-weight: 600;
-            color: #6c757d;
-            cursor: pointer;
-        }
-        .proile-rating{
-            font-size: 12px;
-            color: #818182;
-            margin-top: 5%;
-        }
-        .proile-rating span{
-            color: #495057;
-            font-size: 15px;
-            font-weight: 600;
-        }
-        .profile-head .nav-tabs{
-            margin-bottom:5%;
-        }
-        .profile-head .nav-tabs .nav-link{
-            font-weight:600;
-            border: none;
-        }
-        .profile-head .nav-tabs .nav-link.active{
-            border: none;
-            border-bottom:2px solid #0062cc;
-        }
-        .profile-work{
-            padding: 14%;
-            margin-top: -15%;
-        }
-        .profile-work p{
-            font-size: 12px;
-            color: #818182;
-            font-weight: 600;
-            margin-top: 10%;
-        }
-        .profile-work a{
-            text-decoration: none;
-            color: #495057;
-            font-weight: 600;
+        .p_certificate{
             font-size: 14px;
         }
-        .profile-work ul{
-            list-style: none;
-        }
-        .profile-tab label{
-            font-weight: 600;
-        }
-        .profile-tab p{
-            font-weight: 600;
-            color: #0062cc;
+        .border_certificate{
+
+            border-bottom: 2px black dashed ;
         }
     </style>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-    @endpush
+@endpush
+
 @section('content')
 
     <section class="content-wrapper mt-5">
-        <h1>Student Result</h1>
-        <div class="container emp-profile">
-            <form method="post">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="profile-head">
-                            <h5>
-                                Student Name
-                            </h5>
-                            <h6>
-                                Profession
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="offset-md-2 col-md-8">
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Reg No</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>22334526</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Course Title</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Web Development</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Email</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>student@gmail.com</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Phone</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>01234567890</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Profession</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Student</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>CGPA</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>A</p>
-                                    </div>
-                                </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Father Name</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Money Uddin</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Mother Name</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Lima Khatun</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <h1 class="text-center">Approve of Bangladesh Technical Education Board</h1>
+        <img class="rounded mx-auto d-block" src="{{asset("backend/images/dewanict.png")}}" alt="logo">
+        <p class="text-center">BANGLADESH GOVERNMENT APPROVE</p>
+        <p class="text-center">(REGD.NO:0123654)</p>
+        <h1 class="text-center font-weight-bold">CERTIFICATE</h1>
+        <div class="row">
+            <div class="col-md-3 ml-5 mb-3">
+                <img src="{{asset('backend/images/avatar.png')}}" alt="Student" height="100px" width="100px">
+            </div>
+                <div class="offset-md-5 col-md-3">
+                    <div>Roll No <span class="border_certificate  ml-2">21117044</span></div>
+                    <div> Reg. No <span class="border_certificate  ml-2">20137044</span></div>
+                    <div>Issue Date <span class="border_certificate  ml-2">20.01.2020</span></div>
                 </div>
-            </form>
         </div>
+        <div class="row ml-5">
+           <div class="col-md-12">
+               <div><i>This is certify that</i> <span class="ml-2"><i class="border_certificate"><b>Rono Mahedi</b></i></span></div>
+               <div><i>Father's Name</i> <span class="ml-2"><i class="border_certificate"><b>Moyen Uddin</b></i></span></div>
+               <div><i>Mother's Name</i> <span class="ml-2"><i class="border_certificate"><b>Lima Islam</b></i></span></div>
+               <div><i>He/She has successfully completed</i> <span class="ml-2"><i class="border_certificate"><b>Web Development</b></i></span></div>
+               <div><i>Institute Name</i> <span class="ml-2"><b class="border_certificate"><span>Akram Computer</span></b></span><i> Institute Code no</i> <span><b class="border_certificate"><span> 155 </span></b></span></div>
+               <div><i>Held from</i> <span class="ml-2"> <b class="border_certificate"><span>01.06.2019</span></b></span> <i> TO </i><span class="ml-2"> <b class="border_certificate"><span> 01.06.2019 </span></b></span><i> His/Her grade was </i><span class="border_certificate"><i><b> A </b> </i></span> <i> at under the "Dewan ICT" </i></div>
+           </div>
+        </div>
+        <div class="row mx-5 mt-5">
+            <div class="col-md-4">
+                <hr>
+                <p class="text-center">DIRECTOR</p>
+            </div>
+            <div class="col-md-4">
+                <hr>
+                <p class="text-center">EXAM CONTROLLER</p>
+            </div>
+            <div class="col-md-4">
+                <hr>
+                <p class="text-center">CHAIRMAN</p>
+            </div>
+        </div>
+        <p class="text-center p_certificate">This Certificate may be verified at www.dewanict.com using the Certificate holder's registration number</p>
     </section>
 @endsection

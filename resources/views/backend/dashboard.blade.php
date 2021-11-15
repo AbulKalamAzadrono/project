@@ -93,6 +93,6 @@
         </section>
         <!-- /.content -->
 
-        ggggggggggg
+
     </div>
 @endsection
