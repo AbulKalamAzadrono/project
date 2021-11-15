@@ -82,6 +82,7 @@
                 </li>
                 <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link px-2 text-white">Users</a></li>
                 <li><a href="{{ route('roles.index') }}" class="nav-link px-2 text-white">Roles</a></li>
+                <li><a href="{{ route('permissions.index') }}" class="nav-link px-2 text-white">Permissions</a></li>
 
 
 

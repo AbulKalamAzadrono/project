@@ -13,7 +13,7 @@
             @include('layouts.partials.messages')
         </div>
 
-        <table class="table table-bordered">
+        <table id="example1" class="table table-bordered table-hover">
             <tr>
                 <th width="1%">No</th>
                 <th>Name</th>

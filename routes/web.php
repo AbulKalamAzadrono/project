@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/result',[\App\Http\Controllers\ResultController::class,'index']);
+Route::resource('/students',\App\Http\Controllers\StudentController::class);
+
+
 Route::group(['namespace' => 'App\Http\Controllers'], function()
 {
     /**
@@ -53,10 +57,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::patch('/{user}/update', 'UsersController@update')->name('users.update');
             Route::delete('/{user}/delete', 'UsersController@destroy')->name('users.destroy');
         });
-
-        /**
-         * User Routes
-         */
         Route::group(['prefix' => 'posts'], function() {
             Route::get('/', 'PostsController@index')->name('posts.index');
             Route::get('/create', 'PostsController@create')->name('posts.create');
@@ -66,6 +66,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::patch('/{post}/update', 'PostsController@update')->name('posts.update');
             Route::delete('/{post}/delete', 'PostsController@destroy')->name('posts.destroy');
         });
+        /**
+         * User Routes
+         */
+
 
         Route::resource('roles', RolesController::class);
         Route::resource('permissions', PermissionsController::class);
