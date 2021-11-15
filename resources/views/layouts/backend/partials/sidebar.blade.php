@@ -34,13 +34,13 @@
                         <li class="nav-item">
                             <a href="{{route('users.index')}}" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>User </p>
+                                <p>User Lists</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('users.create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Users create</p>
+                                <p>Users Create</p>
                             </a>
                         </li>
                     </ul>
@@ -57,13 +57,13 @@
                         <li class="nav-item">
                             <a href="{{route('roles.index')}}" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Role </p>
+                                <p>Role Lists</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('roles.create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Roles create</p>
+                                <p>Roles Create</p>
                             </a>
                         </li>
                     </ul>
@@ -81,15 +81,40 @@
                         <li class="nav-item">
                             <a href="{{route('permissions.index')}}" class="nav-link active">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Permission </p>
+                                <p>Permission Lists </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('permissions.create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Permissions create</p>
+                                <p>Permissions Create</p>
                             </a>
                         </li>
+
+                    </ul>
+                </li>
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Results
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('results.index')}}" class="nav-link active">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Result Lists </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('results.create')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Result Create</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
 

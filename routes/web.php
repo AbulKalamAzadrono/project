@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/result',[\App\Http\Controllers\ResultController::class,'index']);
+Route::resource('/results',\App\Http\Controllers\ResultController::class);
 Route::resource('/students',\App\Http\Controllers\StudentController::class);
 
 

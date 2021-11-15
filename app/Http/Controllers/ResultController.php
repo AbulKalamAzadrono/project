@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Result;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class ResultController extends Controller
@@ -24,7 +25,9 @@ class ResultController extends Controller
      */
     public function create()
     {
-        //
+        $students=Student::all();
+
+        return view('backend/results/create',compact('students'));
     }
 
     /**
